@@ -102,11 +102,11 @@
     }
 
     equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
+    might     = getQueryVariable("d")
     liberty   = getQueryVariable("g")
     progress  = getQueryVariable("s")
     wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
+    peace     = (100 - might).toFixed(1)
     authority = (100 - liberty ).toFixed(1)
     tradition = (100 - progress).toFixed(1)
 
@@ -120,7 +120,7 @@
     setBarValue("tradition", tradition)
 
     document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(might, diplArray)
     document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
     document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
 
